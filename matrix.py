@@ -1,18 +1,16 @@
 def find_dominant_index(coefficients: []) -> (int, bool):
-    """
-    :param coefficients: row of coefficients from a matrix
-    :return: tuple of: 0. index of dominant element or None if its not present; 1. is it strict or not
-    """
     for i in range(len(coefficients)):
         coefficient_abs_sum = sum(list(map(abs, coefficients)))
         diff = 2 * abs(coefficients[i]) - coefficient_abs_sum
         if diff >= 0:
             return i, diff != 0
     return None, False
+#возвращает индекс домин. коэф. или none
+
 
 
 class Matrix:
-    def __init__(self, size: int, data: [], right=None):
+    def __init__(self, size: int, data: [], right: []):
         self.coefficients = data
         self.size = size
         # optional right side of equation

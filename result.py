@@ -50,6 +50,7 @@ def solve(matrix: Matrix, precision: str):
     # iteration
     iterations = 0
     error_vector = [0] * len(x_vector)
+
     while True:
         iterations += 1
         for i in range(len(x_vector)):

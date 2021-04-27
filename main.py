@@ -24,6 +24,9 @@ while True:
 
     if filename == '':
         precision = input('Accuracy: ')
+        if float(precision) < 0:
+            print("Accuracy can't be negative")
+            continue
         size = size_validation(int(input('Matrix size: ')))
         print('Matrix coefficients: ')
         matrix = create_filled_matrix(size, input)
